@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Native Guide</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark-mode">
+    <div class="container">
+        <h1>React Native Guide</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="java.html">Java</a></li>
+                <li><a href="react.html">React Native</a></li>
+                <li><a href="practice.html">Practice</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+            </ul>
+        </nav>
+
+        <section id="projects">
+            <section id="palette-selector">
+                <div class="emoji-title">
+                    <span>🎨</span>
+                    <h2>Project 1: PaletteSelector</h2>
+                </div>
+                <div class="explanation">
+                    <h3>Key Concepts</h3>
+                    <ul>
+                        <li>useState Hook</li>
+                        <li>Component State Management</li>
+                        <li>Touch Events</li>
+                        <li>Conditional Rendering</li>
+                    </ul>
+                    <pre><code>// Color selection example
+const [activeColor, setActiveColor] = useState(null);
+
+// Component state updates
+<TouchableOpacity
+    onPress={() => setActiveColor(color)}
+    style={[styles.colorDot, 
+    { backgroundColor: color }]}
+/></code></pre>
+                </div>
+            </section>
+
+            <section id="tech-view">
+                <div class="emoji-title">
+                    <span>🛍️</span>
+                    <h2>Project 2: TechView V2</h2>
+                </div>
+                <div class="explanation">
+                    <h3>Features</h3>
+                    <ul>
+                        <li>Bottom Navigation</li>
+                        <li>Dynamic Screen Rendering</li>
+                        <li>Product Details View</li>
+                        <li>External Links</li>
+                    </ul>
+                    <pre><code>// Navigation example
+const [currentScreen, setCurrentScreen] = useState('Trending');
+
+const renderScreen = () => {
+    switch (currentScreen) {
+        case 'Home': return renderHome();
+        case 'Trending': return renderTrending();
+        default: return null;
+    }
+};</code></pre>
+                </div>
+            </section>
+
+            <section id="world-view">
+                <div class="emoji-title">
+                    <span>🌍</span>
+                    <h2>Project 3: WorldView</h2>
+                </div>
+                <div class="explanation">
+                    <h3>Implementation</h3>
+                    <ul>
+                        <li>Data Mapping</li>
+                        <li>Dynamic UI Updates</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                    <pre><code>// Country data example
+const countriesData = {
+    Lebanon: {
+        location: 'Asia',
+        capital: 'Beirut',
+        population: '4 million'
+    }
+    // More countries...
+};</code></pre>
+                </div>
+            </section>
+
+            <section id="styling">
+                <div class="emoji-title">
+                    <span>💅</span>
+                    <h2>Styling in React Native</h2>
+                </div>
+                <div class="explanation">
+                    <h3>StyleSheet Examples</h3>
+                    <pre><code>const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    button: {
+        padding: 10,
+        borderRadius: 5,
+        backgroundColor: '#007AFF',
+    }
+});</code></pre>
+                </div>
+            </section>
+
+            <section id="hooks-explanation">
+                <div class="emoji-title">
+                    <span>🎣</span>
+                    <h2>React Hooks</h2>
+                </div>
+                <div class="explanation">
+                    <div class="concept-detail">
+                        <h4>useState</h4>
+                        <pre><code>const [count, setCount] = useState(0);
+const [color, setColor] = useState('#000000');
+
+// Usage example
+<TouchableOpacity onPress={() => setCount(count + 1)}>
+    <Text>Count: {count}</Text>
+</TouchableOpacity></code></pre>
+                        <p>Key points:</p>
+                        <ul>
+                            <li>Always declare hooks at the top level</li>
+                            <li>Never use hooks inside conditions</li>
+                            <li>Use meaningful state names</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="components">
+                <div class="emoji-title">
+                    <span>🧩</span>
+                    <h2>Component Structure</h2>
+                </div>
+                <div class="explanation">
+                    <div class="concept-detail">
+                        <h4>Basic Component</h4>
+                        <pre><code>import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+
+const MyComponent = ({ title }) => {
+    return (
+        <View style={styles.container}>
+            <Text style={styles.text}>{title}</Text>
+        </View>
+    );
+};
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        alignItems: 'center'
+    },
+    text: {
+        fontSize: 16
+    }
+});</code></pre>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

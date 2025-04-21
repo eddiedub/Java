@@ -1,0 +1,110 @@
+.practice-area {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+  opacity: 0;
+  animation: fadeIn 0.8s ease 0.6s forwards;
+}
+
+.challenge {
+  background: var(--darker);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--gold);
+}
+
+textarea {
+  width: 93%;
+  background: var(--code-bg);
+  color: var(--light);
+  border: 1px solid #444;
+  border-radius: 4px;
+  padding: 1rem;
+  font-family: 'Consolas', monospace;
+  margin: 1rem 0;
+}
+
+.submit-btn {
+  background: var(--gold);
+  color: var(--dark);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.result {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.result.success {
+  background: rgba(0, 255, 0, 0.1);
+  border: 1px solid #00ff00;
+}
+
+.result.error {
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid #ff0000;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+#challenge-select {
+  background: var(--code-bg);
+  color: var(--light);
+  border: 1px solid var(--gold);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: inherit;
+  flex-grow: 1;
+}
+
+.nav-btn {
+  background: var(--dark);
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.nav-btn:hover {
+  background: var(--gold);
+  color: var(--dark);
+}
+
+.next-btn {
+  background: var(--dark);
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.next-btn:hover {
+  background: var(--gold);
+  color: var(--dark);
+}
+
+/* Add animations */
+h1 {
+  animation: fadeDown 0.8s ease forwards;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.8s ease 0.3s forwards;
+}

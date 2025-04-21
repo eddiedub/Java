@@ -1,0 +1,100 @@
+🔧 ALTER TABLE – Modify Existing Tables
+These come from tasks like 3, 4, and 5 in the instructions.
+
+✅ Task 5 – Add genre column with specific allowed values
+sql
+Copy
+Edit
+ALTER TABLE Customer
+ADD genre ENUM('corporate', 'residentiel', 'nonProfit');
+🔹 Explanation:
+
+Adds a new column called genre to the Customer table.
+
+ENUM restricts the values so only corporate, residentiel, or nonProfit can be inserted.
+
+✅ Task 6 – Delete customer where ID is 5003
+sql
+Copy
+Edit
+DELETE FROM Customer
+WHERE customer_id = 5003;
+🔹 Explanation:
+
+Deletes the row where customer_id equals 5003.
+
+🔍 SELECT Queries – With DISTINCT, ORDER BY, LIMIT
+These cover tasks 7 to 10 and use key SQL techniques.
+
+✅ Task 7 – Salesmen working for customers
+sql
+Copy
+Edit
+SELECT DISTINCT s.name, c.cust_name
+FROM Salesman s
+JOIN Customer c ON s.salesman_id = c.salesman_id;
+🔹 Keywords:
+
+DISTINCT – avoids duplicate (salesman, customer) pairs.
+
+JOIN – connects Salesman and Customer tables through the salesman_id.
+
+✅ Task 8 – List of names of salesmen and customers in same city
+sql
+Copy
+Edit
+SELECT s.name AS salesman_name, c.cust_name AS customer_name, s.city
+FROM Salesman s
+JOIN Customer c ON s.city = c.city;
+🔹 Explanation:
+
+Selects names of salesmen and customers who live in the same city.
+
+✅ Task 9 – First 3 customers with salesmen having commission > 13%
+sql
+Copy
+Edit
+SELECT DISTINCT c.cust_name
+FROM Customer c
+JOIN Salesman s ON c.salesman_id = s.salesman_id
+WHERE s.commission > 0.13
+ORDER BY c.cust_name ASC
+LIMIT 3;
+🔹 Explanation:
+
+Filters customers whose salesmen earn >13% commission.
+
+ORDER BY sorts alphabetically.
+
+LIMIT 3 returns only the first 3 results.
+
+✅ Task 10 – Salesmen with orders in November 2012 and amount > 1000
+sql
+Copy
+Edit
+SELECT DISTINCT s.name
+FROM Salesman s
+JOIN OrderTable o ON s.salesman_id = o.salesman_id
+WHERE o.ord_date BETWEEN '2012-11-01' AND '2012-11-30'
+  AND o.purch_amt > 1000
+ORDER BY s.name;
+🔹 Explanation:
+
+Filters orders from November 2012 with amount > 1000.
+
+Gets the names of the salesmen who made these sales.
+
+Sorted alphabetically by name.
+
+Summary of SQL Keywords:
+Keyword	Purpose
+ALTER TABLE	Modify a table's structure
+ADD	Add new column
+ENUM	Restrict values to predefined list
+DELETE	Remove row(s)
+SELECT	Query data
+DISTINCT	Get unique values only
+ORDER BY	Sort results
+LIMIT	Restrict number of results
+JOIN	Combine rows from related tables
+WHERE	Filter rows by condition

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SQL Practice</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="practice.css">
+</head>
+<body class="dark-mode">
+  <div class="container">
+    <h1>SQL Practice</h1>
+    <nav>
+      <ul class="fade-in">
+        <li><a href="index.html">Guide</a></li>
+        <li><a href="practice.html">Practice SQL</a></li>
+        <li><a href="quiz.html">Take Quiz</a></li>
+      </ul>
+    </nav>
+
+    <div class="practice-area fade-in">
+      <div class="challenge">
+        <h3 id="challenge-title">Challenge 1: Select all customers</h3>
+        <p id="challenge-description">Write a query to select all customers from the Customer table.</p>
+        <textarea id="sqlInput" rows="4" placeholder="Write your SQL query here..."></textarea>
+        <div class="button-group">
+          <select id="challenge-select" onchange="loadSelectedChallenge()">
+            <option value="0">Challenge 1: Select all customers</option>
+            <option value="1">Challenge 2: Find High Commission Salesmen</option>
+            <option value="2">Challenge 3: Join Tables</option>
+            <option value="3">Challenge 4: Group Orders</option>
+            <option value="4">Challenge 5: Add Foreign Key</option>
+            <option value="5">Challenge 6: HAVING Clause</option>
+            <option value="6">Challenge 7: Subquery</option>
+            <option value="7">Challenge 8: UNION Operation</option>
+            <option value="8">Challenge 9: Date Functions</option>
+            <option value="9">Challenge 10: Complex JOIN</option>
+          </select>
+          <button onclick="previousChallenge()" class="nav-btn" id="prev-challenge">Previous</button>
+          <button onclick="checkQuery(currentChallenge)" class="submit-btn">Run Query</button>
+          <button onclick="nextChallenge()" class="nav-btn" id="next-challenge">Next</button>
+        </div>
+        <div id="result" class="result"></div>
+      </div>
+
+      <div class="db-state">
+        <h3>Reference Information</h3>
+        <pre><code>Add your reference information here
+Example structure or hints
+Additional helpful information</code></pre>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script src="practice.js"></script>
+</body>
+</html>

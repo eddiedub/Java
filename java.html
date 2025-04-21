@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Java Learning Guide</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark-mode">
+    <div class="container">
+        <h1>Java Guide</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="java.html">Java</a></li>
+                <li><a href="react.html">React Native</a></li>
+                <li><a href="practice.html">Practice</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+            </ul>
+        </nav>
+
+        <section id="week1">
+            <div class="emoji-title">
+                <span>📚</span>
+                <h2>Week 1: Java Fundamentals</h2>
+            </div>
+            <div class="explanation">
+                <h3>Days 1-2: Core Concepts</h3>
+                <ul>
+                    <li>Variables & Data Types</li>
+                    <li>Control Structures (if/else, loops)</li>
+                    <li>Pattern printing programs</li>
+                    <li>String operations</li>
+                </ul>
+                <pre><code>// String operations example
+String str = "hello";
+str = str.concat("world");  // "helloworld"
+str.substring(1, 3);        // "el"
+str.length();               // 10</code></pre>
+                <div class="concept-detail">
+                    <h4>Understanding Variables & Data Types</h4>
+                    <p>Java is strongly typed, which means you must declare variable types:</p>
+                    <pre><code>int number = 10;            // For whole numbers
+double decimal = 10.5;      // For decimal numbers
+String text = "Hello";      // For text
+boolean flag = true;        // For true/false values</code></pre>
+                    
+                    <h4>Control Structures Explained</h4>
+                    <p>Control flow determines how your program executes:</p>
+                    <pre><code>// If-else example
+if (score >= 90) {
+    grade = "A";
+} else if (score >= 80) {
+    grade = "B";
+}
+
+// Loop example
+for (int i = 0; i < 5; i++) {
+    System.out.println(i);
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="variables">
+            <div class="emoji-title">
+                <span>📦</span>
+                <h2>Variables & Data Types</h2>
+            </div>
+            <div class="explanation">
+                <div class="concept-detail">
+                    <h4>Core Data Types</h4>
+                    <pre><code>int count = 10;         // Whole numbers
+double price = 19.99;   // Decimal numbers
+boolean isActive = true;  // true/false values
+char grade = 'A';        // Single character
+String name = "John";    // Text strings</code></pre>
+                    <p>Common operations:</p>
+                    <ul>
+                        <li>Arithmetic: +, -, *, /, %</li>
+                        <li>Comparison: ==, !=, >, <, >=, <=</li>
+                        <li>Logical: &&, ||, !</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="control-flow">
+            <div class="emoji-title">
+                <span>🔄</span>
+                <h2>Control Flow</h2>
+            </div>
+            <div class="explanation">
+                <div class="concept-detail">
+                    <h4>Decision Making</h4>
+                    <pre><code>// If-else structure
+if (score >= 90) {
+    grade = "A";
+} else if (score >= 80) {
+    grade = "B";
+} else {
+    grade = "C";
+}
+
+// Switch statement
+switch(dayOfWeek) {
+    case 1: 
+        return "Monday";
+    case 2: 
+        return "Tuesday";
+    default: 
+        return "Invalid day";
+}</code></pre>
+                    <h4>Loops</h4>
+                    <pre><code>// For loop
+for(int i = 0; i < 5; i++) {
+    System.out.println(i);
+}
+
+// While loop
+while(condition) {
+    // code block
+}
+
+// Enhanced for loop (for arrays)
+for(String item : items) {
+    System.out.println(item);
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="arrays">
+            <div class="emoji-title">
+                <span>🔢</span>
+                <h2>Arrays & Logic</h2>
+            </div>
+            <div class="explanation">
+                <h3>Key Concepts</h3>
+                <ul>
+                    <li>Array declaration and initialization</li>
+                    <li>Array traversal and manipulation</li>
+                    <li>2D arrays</li>
+                </ul>
+                <pre><code>// Array filter example
+public void filterOdds(int[] arr) {
+    for(int i = 0; i < arr.length; i++) {
+        if(arr[i] % 2 != 0) {
+            arr[i] = 0;
+        }
+    }
+}</code></pre>
+                <div class="concept-detail">
+                    <h4>Working with Arrays</h4>
+                    <p>Arrays store multiple values of the same type:</p>
+                    <pre><code>// 1D Array
+int[] numbers = new int[5];  // Creates array of 5 integers
+
+// 2D Array
+int[][] matrix = new int[3][3];  // Creates 3x3 grid
+
+// Array initialization
+int[] scores = {90, 85, 88, 92, 95};</code></pre>
+                    
+                    <h4>Common Array Operations</h4>
+                    <ul>
+                        <li>Access element: array[index]</li>
+                        <li>Update element: array[index] = newValue</li>
+                        <li>Get length: array.length</li>
+                        <li>Loop through array: for(int i = 0; i < array.length; i++)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="oop">
+            <div class="emoji-title">
+                <span>🏗️</span>
+                <h2>Object-Oriented Programming</h2>
+            </div>
+            <div class="explanation">
+                <h3>Classes & Objects</h3>
+                <ul>
+                    <li>Class structure</li>
+                    <li>Constructors</li>
+                    <li>Methods & Properties</li>
+                    <li>Encapsulation</li>
+                </ul>
+                <pre><code>// Class example
+public class Circle {
+    private double radius;
+    
+    public Circle(double r) {
+        this.radius = r;
+    }
+    
+    public double getArea() {
+        return Math.PI * radius * radius;
+    }
+}</code></pre>
+                <div class="concept-detail">
+                    <h4>1. Encapsulation</h4>
+                    <p>Bundling data and methods that operate on that data within a single unit:</p>
+                    <pre><code>public class Student {
+    private String name;    // private field
+    private int age;       // private field
+    
+    // Public getter
+    public String getName() {
+        return name;
+    }
+    
+    // Public setter
+    public void setName(String name) {
+        this.name = name;
+    }
+}</code></pre>
+
+                    <h4>2. Inheritance</h4>
+                    <p>Creating new classes that are built upon existing classes:</p>
+                    <pre><code>// Parent class
+public class Animal {
+    protected String name;
+    
+    public void eat() {
+        System.out.println("Animal is eating");
+    }
+}
+
+// Child class
+public class Dog extends Animal {
+    public void bark() {
+        System.out.println("Dog is barking");
+    }
+    
+    @Override
+    public void eat() {
+        System.out.println("Dog is eating");
+    }
+}</code></pre>
+
+                    <h4>3. Polymorphism</h4>
+                    <p>Ability of objects to take on multiple forms:</p>
+                    <pre><code>// Method overloading
+public class Calculator {
+    public int add(int a, int b) {
+        return a + b;
+    }
+    
+    public double add(double a, double b) {
+        return a + b;
+    }
+}
+
+// Method overriding (seen in inheritance example)
+Animal myDog = new Dog();  // Polymorphic reference
+myDog.eat();  // Calls Dog's eat method</code></pre>
+
+                    <h4>4. Abstraction</h4>
+                    <p>Hiding complex implementation details and showing only functionality:</p>
+                    <pre><code>// Abstract class
+abstract class Shape {
+    abstract double getArea();
+    abstract double getPerimeter();
+}
+
+// Concrete class
+class Rectangle extends Shape {
+    private double width;
+    private double height;
+    
+    public Rectangle(double width, double height) {
+        this.width = width;
+        this.height = height;
+    }
+    
+    @Override
+    double getArea() {
+        return width * height;
+    }
+    
+    @Override
+    double getPerimeter() {
+        return 2 * (width + height);
+    }
+}</code></pre>
+
+                    <h4>5. Interfaces</h4>
+                    <p>Defining a contract for class behavior:</p>
+                    <pre><code>interface Movable {
+    void moveUp();
+    void moveDown();
+    void moveLeft();
+    void moveRight();
+}
+
+class Player implements Movable {
+    private int x, y;
+    
+    @Override
+    public void moveUp() { y--; }
+    
+    @Override
+    public void moveDown() { y++; }
+    
+    @Override
+    public void moveLeft() { x--; }
+    
+    @Override
+    public void moveRight() { x++; }
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="scanner">
+            <div class="emoji-title">
+                <span>⌨️</span>
+                <h2>Using Scanner</h2>
+            </div>
+            <div class="explanation">
+                <div class="concept-detail">
+                    <h4>What is Scanner?</h4>
+                    <p>Scanner is a class in java.util package used to get user input from various sources (keyboard, files, etc).</p>
+                    
+                    <h4>Basic Usage</h4>
+                    <pre><code>import java.util.Scanner;  // Import at top of file
+
+public class InputExample {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Reading different types of input
+        System.out.print("Enter your name: ");
+        String name = scanner.nextLine();     // Reads whole line
+        
+        System.out.print("Enter your age: ");
+        int age = scanner.nextInt();          // Reads integer
+        
+        System.out.print("Enter your height: ");
+        double height = scanner.nextDouble();  // Reads decimal
+        
+        scanner.close();  // Always close scanner when done
+    }
+}</code></pre>
+
+                    <h4>Common Pitfalls</h4>
+                    <ul>
+                        <li>nextInt() doesn't consume the newline character</li>
+                        <li>Always use scanner.nextLine() after scanner.nextInt() to consume leftover newline</li>
+                        <li>Handle InputMismatchException for invalid inputs</li>
+                    </ul>
+
+                    <h4>Best Practice Example</h4>
+                    <pre><code>try {
+    Scanner scanner = new Scanner(System.in);
+    
+    System.out.print("Enter a number: ");
+    int num = scanner.nextInt();
+    scanner.nextLine();  // Consume newline left-over
+    
+    System.out.print("Enter text: ");
+    String text = scanner.nextLine();
+    
+    scanner.close();
+} catch (Exception e) {
+    System.out.println("Invalid input!");
+}</code></pre>
+
+                    <h4>Key Methods</h4>
+                    <ul>
+                        <li><code>nextLine()</code> - Reads a line of text</li>
+                        <li><code>next()</code> - Reads a single word</li>
+                        <li><code>nextInt()</code> - Reads an integer</li>
+                        <li><code>nextDouble()</code> - Reads a decimal number</li>
+                        <li><code>hasNext()</code> - Checks if more input exists</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="scanner-arrays">
+            <div class="emoji-title">
+                <span>🎲</span>
+                <h2>Scanner with 2D Arrays</h2>
+            </div>
+            <div class="explanation">
+                <div class="concept-detail">
+                    <h4>Creating Dynamic Tables</h4>
+                    <p>Common exam question: Create a table with user-specified dimensions and values.</p>
+                    
+                    <pre><code>import java.util.Scanner;
+
+public class TableCreator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        try {
+            // Get table dimensions
+            System.out.print("Enter number of rows: ");
+            int rows = scanner.nextInt();
+            
+            System.out.print("Enter number of columns: ");
+            int cols = scanner.nextInt();
+            
+            // Create the 2D array
+            int[][] table = new int[rows][cols];
+            
+            // Fill the table
+            System.out.println("Enter numbers for the table:");
+            for(int i = 0; i < rows; i++) {
+                for(int j = 0; j < cols; j++) {
+                    System.out.printf("Enter value for position [%d][%d]: ", i, j);
+                    table[i][j] = scanner.nextInt();
+                }
+            }
+            
+            // Display the table
+            System.out.println("\nYour table:");
+            for(int i = 0; i < rows; i++) {
+                for(int j = 0; j < cols; j++) {
+                    System.out.print(table[i][j] + "\t");
+                }
+                System.out.println();
+            }
+            
+        } catch (Exception e) {
+            System.out.println("Invalid input! Please enter numbers only.");
+        } finally {
+            scanner.close();
+        }
+    }
+}</code></pre>
+
+                    <h4>Example Output:</h4>
+                    <pre><code>Enter number of rows: 2
+Enter number of columns: 3
+Enter numbers for the table:
+Enter value for position [0][0]: 1
+Enter value for position [0][1]: 2
+Enter value for position [0][2]: 3
+Enter value for position [1][0]: 4
+Enter value for position [1][1]: 5
+Enter value for position [1][2]: 6
+
+Your table:
+1   2   3
+4   5   6</code></pre>
+
+                    <h4>Key Points:</h4>
+                    <ul>
+                        <li>Always validate user input</li>
+                        <li>Use try-catch for error handling</li>
+                        <li>Consider using printf for formatted output</li>
+                        <li>Remember to close the Scanner</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="exam-tips">
+            <div class="emoji-title">
+                <span>📝</span>
+                <h2>Exam Preparation Tips</h2>
+            </div>
+            <div class="explanation">
+                <ul>
+                    <li>Focus on understanding patterns, not memorizing</li>
+                    <li>Practice writing code by hand</li>
+                    <li>Review core concepts daily</li>
+                    <li>Complete all practice exercises</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="best-practices">
+            <div class="emoji-title">
+                <span>✨</span>
+                <h2>Best Practices</h2>
+            </div>
+            <div class="explanation">
+                <h3>Code Style Guidelines</h3>
+                <ul>
+                    <li>Use meaningful variable names</li>
+                    <li>Add comments to explain complex logic</li>
+                    <li>Follow Java naming conventions</li>
+                    <li>Keep methods short and focused</li>
+                </ul>
+                <div class="concept-detail">
+                    <h4>Example of Good vs Bad Code</h4>
+                    <pre><code>// Bad code
+int x = 5;
+if(x>3) {y=2;}
+
+// Good code
+int studentCount = 5;
+if (studentCount > MIN_CLASS_SIZE) {
+    classesNeeded = 2;  // Split into two classes
+}</code></pre>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+#quiz-container {
+  background: var(--darker);
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+  border: 1px solid var(--gold);
+  opacity: 0;
+  animation: fadeIn 0.8s ease 0.6s forwards;
+}
+
+.quiz-option {
+  background: var(--code-bg);
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.quiz-option:hover {
+  background: var(--gold);
+  color: var(--dark);
+}
+
+.quiz-btn {
+  background: var(--gold);
+  color: var(--dark);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+#score-container {
+  margin-top: 1rem;
+  color: var(--gold);
+  font-weight: bold;
+}
+
+.feedback {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.feedback.correct {
+  background: rgba(0, 255, 0, 0.1);
+  border: 1px solid #00ff00;
+}
+
+.feedback.incorrect {
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid #ff0000;
+}
+
+.correct-answer {
+  background: rgba(0, 255, 0, 0.2) !important;
+  border: 1px solid #00ff00;
+}
+
+.question-text {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--gold);
+}
+
+/* Add animations */
+h1 {
+  animation: fadeDown 0.8s ease forwards;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.8s ease 0.3s forwards;
+}
